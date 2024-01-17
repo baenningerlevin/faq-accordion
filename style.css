@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+/* ===================
+    GENERAL STYLES    
+====================== */
+
+:root {
+  /* Colors */
+  --clr-primary-400: hsl(275, 100%, 97%);
+  --clr-primary-500: hsl(282, 74%, 52%);
+  --clr-primary-700: hsl(292, 42%, 14%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(282, 100%, 94%);
+  --clr-neutral-400: hsl(292, 16%, 49%);
+
+  /* Font families */
+  --ff-primary: 'Work Sans', sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(var(--ff-primary));
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+
+  /* Font sizes */
+  --fs-400: 0.875rem;
+  --fs-500: 1rem;
+  --fs-700: 2rem;
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-700);
+  --fs-secondary-heading: var(--fs-500);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/images/background-pattern-mobile.svg) no-repeat;
+  background-color: var(--clr-neutral-300);
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+  font-family: var(--ff-body);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===============
+    COMPONENTS    
+================== */
+
+.container {
+  background-color: var(--clr-neutral-100);
+  width: 100%;
+  padding: 1em 1.5em;
+  margin: 10em 1em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  box-shadow: 0 3px 10px rgba(0 0 0 0.2);
+  height: max-content;
+}
+
+/* HEADING */
+
+.heading {
+  display: flex;
+  gap: 1.25em;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  color: var(--clr-primary-700);
+  font-size: var(--fs-primary-heading);
+}
+
+/* QUESTION */
+
+.question {
+  display: flex;
+  padding: 0.5em 0;
+  gap: 2.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question:hover {
+  cursor: pointer;
+}
+
+.question-title {
+  color: var(--clr-primary-700);
+  font-size: var(--fs-secondary-heading);
+  transition: 0.3s;
+}
+
+.question-title:hover {
+  color: var(--clr-primary-500);
+}
+
+.question-icon {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+}
+
+/* ANSWER */
+
+.answer {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  padding: 0.5em 1em 1em 0;
+}
+
+/* LINE */
+
+hr {
+  color: var(--clr-neutral-300);
+  opacity: 0.2;
+}
+
+/* ===============
+    RESPONSIVE    
+================== */
+
+@media screen and (min-width: 375px) {
+  body {
+    background: url(./assets/images/background-pattern-desktop.svg) repeat-x;
+    background-color: var(--clr-neutral-300);
+  }
+}
+
+@media screen and (min-width: 550px) {
+  :root {
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-700: 3rem;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .container {
+    width: 600px;
+  }
+}
