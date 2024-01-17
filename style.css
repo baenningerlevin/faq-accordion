@@ -64,7 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75em;
-  box-shadow: 0 3px 10px rgba(0 0 0 0.2);
+  box-shadow: 0 15px 20px 5px rgba(0,0,0,0.3);
   height: max-content;
 }
 
